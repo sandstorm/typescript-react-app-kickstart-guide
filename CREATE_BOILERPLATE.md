@@ -33,11 +33,9 @@ yarn add @types/react-data-grid @types/react-redux @types/faker
 cp -v <path/to/this/dir>/{.editorconfig,tsconfig.json,tslint.json} .
 
 # add lint script to package.json
-    # put script definition into clipboad
-    echo '"lint": "./node_modules/.bin/tslint -t codeFrame -p ./tsconfig.json -c tslint.json"' | pbcopy
-    # open editor
+    # open `package.json` editor add this line to "scripts"
+    # "lint": "./node_modules/.bin/tslint -t codeFrame -p ./tsconfig.json -c tslint.json"
     vim package.json
-    # paste (cmd-v) at the bottom of scripts, save, exit
 
 # try lint command
 yarn lint

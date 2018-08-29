@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Domain/Domain.html" />
+    <link rel="next" href="../Domain/DOMAIN.html" />
     
     
-    <link rel="prev" href="../Components/Components.html" />
+    <link rel="prev" href="../Components/COMPONENTS.html" />
     
 
     </head>
@@ -139,6 +139,51 @@
                 <span>
             
                     
+                    StoryBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../ADD_STORYBOOK.html">
+            
+                <a href="../../ADD_STORYBOOK.html">
+            
+                    
+                    Add Storybook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../CREATE_STORIES.html">
+            
+                <a href="../../CREATE_STORIES.html">
+            
+                    
+                    Create Stories
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
                     Cookbook
             
                 </span>
@@ -148,9 +193,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../Components/Components.html">
+        <li class="chapter " data-level="1.4.1" data-path="../Components/COMPONENTS.html">
             
-                <a href="../Components/Components.html">
+                <a href="../Components/COMPONENTS.html">
             
                     
                     Components
@@ -161,9 +206,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="Containers.html">
+        <li class="chapter active" data-level="1.4.2" data-path="CONTAINERS.html">
             
-                <a href="Containers.html">
+                <a href="CONTAINERS.html">
             
                     
                     Containers
@@ -174,9 +219,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../Domain/Domain.html">
+        <li class="chapter " data-level="1.4.3" data-path="../Domain/DOMAIN.html">
             
-                <a href="../Domain/Domain.html">
+                <a href="../Domain/DOMAIN.html">
             
                     
                     Domain
@@ -187,7 +232,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" >
+        <li class="chapter " data-level="1.4.4" >
             
                 <span>
             
@@ -201,9 +246,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.4.1" data-path="../Redux/Configuration.html">
+        <li class="chapter " data-level="1.4.4.1" data-path="../Redux/REDUX_CONFIGURATION.html">
             
-                <a href="../Redux/Configuration.html">
+                <a href="../Redux/REDUX_CONFIGURATION.html">
             
                     
                     Configuration
@@ -214,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.2" data-path="../Redux/Store/Store.html">
+        <li class="chapter " data-level="1.4.4.2" data-path="../Redux/Store/REDUX_STORE.html">
             
-                <a href="../Redux/Store/Store.html">
+                <a href="../Redux/Store/REDUX_STORE.html">
             
                     
                     Store
@@ -283,8 +328,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="containers">Containers</h1>
-<p>Or sometimes called <em>connected</em> or <em>smart</em> components are connected to the Redux store and usually wrap <a href="../Components/Components.html"><em>presentational</em> Components</a> and provide them with data from the store.</p>
+<p>Or sometimes called <em>connected</em> or <em>smart</em> components are connected to the Redux store and usually wrap <a href="../Components/COMPONENTS.html"><em>presentational</em> Components</a> and provide them with data from the store.</p>
 <p>Containers usually render no markup themselves. Try to use <code>React.Fragment</code> if otherwise using <code>div</code>.</p>
+<p>Containers do not have to be large constructs. In fact it&apos;s recommended to use small containers that only connect to a minimal portion of the state.</p>
 <h2 id="skeleton">Skeleton</h2>
 <pre><code class="lang-tsx">import * as React from &apos;react&apos;;
 import {connect} from &apos;react-redux&apos;;
@@ -332,12 +378,12 @@ export default connect(mapStateToProps, mapDispatchToProps)(${1:ContainerName});
 
             
                 
-                <a href="../Components/Components.html" class="navigation navigation-prev " aria-label="Previous page: Components">
+                <a href="../Components/COMPONENTS.html" class="navigation navigation-prev " aria-label="Previous page: Components">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Domain/Domain.html" class="navigation navigation-next " aria-label="Next page: Domain">
+                <a href="../Domain/DOMAIN.html" class="navigation navigation-next " aria-label="Next page: Domain">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -348,7 +394,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(${1:ContainerName});
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Containers","level":"1.3.2","depth":2,"next":{"title":"Domain","level":"1.3.3","depth":2,"path":"src/Domain/Domain.md","ref":"src/Domain/Domain.md","articles":[]},"previous":{"title":"Components","level":"1.3.1","depth":2,"path":"src/Components/Components.md","ref":"src/Components/Components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/Containers/Containers.md","mtime":"2018-08-29T11:00:00.312Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T11:33:21.590Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Containers","level":"1.4.2","depth":2,"next":{"title":"Domain","level":"1.4.3","depth":2,"path":"src/Domain/DOMAIN.md","ref":"src/Domain/DOMAIN.md","articles":[]},"previous":{"title":"Components","level":"1.4.1","depth":2,"path":"src/Components/COMPONENTS.md","ref":"src/Components/COMPONENTS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/Containers/CONTAINERS.md","mtime":"2018-08-29T18:57:34.961Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T17:27:43.734Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

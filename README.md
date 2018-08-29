@@ -4,7 +4,6 @@ This gitbook serves as a guide for kickstarting a new React project.
 
 ## TODO
 These features are currently missing but will be added in due time:
-* Storybook
 * Enzyme & Jest
 * Sass workflow
 

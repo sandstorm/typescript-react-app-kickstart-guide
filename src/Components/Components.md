@@ -5,7 +5,7 @@ They work like pure functions and thus are easy to test and maintain.
 
 We use the Atomic Design pattern to organise and compose our presentational components.
 
-We leverage **Storybook** When developing presentational components.
+We leverage [Storybook](../../ADD_STORYBOOK.md) When developing presentational components.
 
 ## Skeleton
 This can be used as snippet in VSCode or by copy-pasting. Replace ${1:ComponentName} with the actual component name (automaticly happens when using VSCode snippets).
