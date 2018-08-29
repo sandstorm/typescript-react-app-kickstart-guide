@@ -29,6 +29,10 @@ yarn add -g gitbook
 yarn add -g create-react-app react-scripts-ts
 ```
 
+Furthermore I recommend to use [VSCode](https://code.visualstudio.com/) as editor. Be shure to install the `TSLint` extension.
+
+>You can install my personal extensions, settings, snippets etc with the `Settings Sync` extension. My public Gist ID is `89543bfc77af937a37916040a0dfad3c`.
+
 ## How to Read
 
 ```bash
