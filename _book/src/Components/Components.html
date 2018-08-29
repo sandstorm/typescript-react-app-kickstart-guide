@@ -146,12 +146,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../../ADD_STORYBOOK.html">
+        <li class="chapter " data-level="1.3.1" data-path="../../SETUP_STORYBOOK.html">
             
-                <a href="../../ADD_STORYBOOK.html">
+                <a href="../../SETUP_STORYBOOK.html">
             
                     
-                    Add Storybook
+                    Setup Storybook
             
                 </a>
             
@@ -182,6 +182,51 @@
                 <span>
             
                     
+                    Tests
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../SETUP_TESTS.html">
+            
+                <a href="../../SETUP_TESTS.html">
+            
+                    
+                    Setup Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../CREATE_TESTS.html">
+            
+                <a href="../../CREATE_TESTS.html">
+            
+                    
+                    Create Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
                     Cookbook
             
                 </span>
@@ -191,7 +236,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="COMPONENTS.html">
+        <li class="chapter active" data-level="1.5.1" data-path="COMPONENTS.html">
             
                 <a href="COMPONENTS.html">
             
@@ -204,7 +249,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Containers/CONTAINERS.html">
+        <li class="chapter " data-level="1.5.2" data-path="../Containers/CONTAINERS.html">
             
                 <a href="../Containers/CONTAINERS.html">
             
@@ -217,7 +262,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../Domain/DOMAIN.html">
+        <li class="chapter " data-level="1.5.3" data-path="../Domain/DOMAIN.html">
             
                 <a href="../Domain/DOMAIN.html">
             
@@ -230,7 +275,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" >
+        <li class="chapter " data-level="1.5.4" >
             
                 <span>
             
@@ -244,7 +289,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.4.1" data-path="../Redux/REDUX_CONFIGURATION.html">
+        <li class="chapter " data-level="1.5.4.1" data-path="../Redux/REDUX_CONFIGURATION.html">
             
                 <a href="../Redux/REDUX_CONFIGURATION.html">
             
@@ -257,7 +302,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.2" data-path="../Redux/Store/REDUX_STORE.html">
+        <li class="chapter " data-level="1.5.4.2" data-path="../Redux/Store/REDUX_STORE.html">
             
                 <a href="../Redux/Store/REDUX_STORE.html">
             
@@ -329,8 +374,16 @@
 <p>Or sometimes called <em>presentational</em> or <em>dumb</em> components are components that only render markup based on their props.
 They work like pure functions and thus are easy to test and maintain.</p>
 <p>We use the Atomic Design pattern to organise and compose our presentational components.</p>
-<p>We leverage <a href="../../ADD_STORYBOOK.html">Storybook</a> When developing presentational components.</p>
-<h2 id="skeleton">Skeleton</h2>
+<p>We leverage <a href="../../SETUP_STORYBOOK.html">Storybook</a> When developing presentational components.</p>
+<p>You can also <a href="../../CREATE_TESTS.html">write tests</a>.</p>
+<p>The directory of a presentational component looks like this:</p>
+<pre><code>* ComponentName
+- * index.ts
+- * ComponentName.tsx
+- * ComponentName.test.tsx
+- * ComponentName.story.tsx
+// TODO Styles
+</code></pre><h2 id="skeleton">Skeleton</h2>
 <p>This can be used as snippet in VSCode or by copy-pasting. Replace ${1:ComponentName} with the actual component name (automaticly happens when using VSCode snippets).</p>
 <pre><code class="lang-tsx">import * as React from &apos;react&apos;;
 import &apos;./${1:ComponentName}.css&apos;;
@@ -391,7 +444,7 @@ export default class ${1:ComponentName} extends React.PureComponent&lt;I${1:Comp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Components","level":"1.4.1","depth":2,"next":{"title":"Containers","level":"1.4.2","depth":2,"path":"src/Containers/CONTAINERS.md","ref":"src/Containers/CONTAINERS.md","articles":[]},"previous":{"title":"Cookbook","level":"1.4","depth":1,"ref":"","articles":[{"title":"Components","level":"1.4.1","depth":2,"path":"src/Components/COMPONENTS.md","ref":"src/Components/COMPONENTS.md","articles":[]},{"title":"Containers","level":"1.4.2","depth":2,"path":"src/Containers/CONTAINERS.md","ref":"src/Containers/CONTAINERS.md","articles":[]},{"title":"Domain","level":"1.4.3","depth":2,"path":"src/Domain/DOMAIN.md","ref":"src/Domain/DOMAIN.md","articles":[]},{"title":"Redux","level":"1.4.4","depth":2,"ref":"","articles":[{"title":"Configuration","level":"1.4.4.1","depth":3,"path":"src/Redux/REDUX_CONFIGURATION.md","ref":"src/Redux/REDUX_CONFIGURATION.md","articles":[]},{"title":"Store","level":"1.4.4.2","depth":3,"path":"src/Redux/Store/REDUX_STORE.md","ref":"src/Redux/Store/REDUX_STORE.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/Components/COMPONENTS.md","mtime":"2018-08-29T19:20:04.231Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T17:27:43.734Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Components","level":"1.5.1","depth":2,"next":{"title":"Containers","level":"1.5.2","depth":2,"path":"src/Containers/CONTAINERS.md","ref":"src/Containers/CONTAINERS.md","articles":[]},"previous":{"title":"Cookbook","level":"1.5","depth":1,"ref":"","articles":[{"title":"Components","level":"1.5.1","depth":2,"path":"src/Components/COMPONENTS.md","ref":"src/Components/COMPONENTS.md","articles":[]},{"title":"Containers","level":"1.5.2","depth":2,"path":"src/Containers/CONTAINERS.md","ref":"src/Containers/CONTAINERS.md","articles":[]},{"title":"Domain","level":"1.5.3","depth":2,"path":"src/Domain/DOMAIN.md","ref":"src/Domain/DOMAIN.md","articles":[]},{"title":"Redux","level":"1.5.4","depth":2,"ref":"","articles":[{"title":"Configuration","level":"1.5.4.1","depth":3,"path":"src/Redux/REDUX_CONFIGURATION.md","ref":"src/Redux/REDUX_CONFIGURATION.md","articles":[]},{"title":"Store","level":"1.5.4.2","depth":3,"path":"src/Redux/Store/REDUX_STORE.md","ref":"src/Redux/Store/REDUX_STORE.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/Components/COMPONENTS.md","mtime":"2018-08-29T20:00:25.611Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T20:02:17.826Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

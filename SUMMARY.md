@@ -4,8 +4,11 @@
 * Getting Started
   * [Create Boilerplate](CREATE_BOILERPLATE.md)
 * StoryBook
-  * [Add Storybook](ADD_STORYBOOK.md)
+  * [Setup Storybook](SETUP_STORYBOOK.md)
   * [Create Stories](CREATE_STORIES.md)
+* Tests
+  * [Setup Tests](SETUP_TESTS.md)
+  * [Create Tests](CREATE_TESTS.md)
 * Cookbook
   * [Components](src/Components/COMPONENTS.md)
   * [Containers](src/Containers/CONTAINERS.md)

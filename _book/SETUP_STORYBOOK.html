@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Create Boilerplate · GitBook</title>
+        <title>Setup Storybook · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="CREATE_STORIES.html" />
     
     
 
@@ -112,7 +114,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="CREATE_BOILERPLATE.html">
+        <li class="chapter " data-level="1.2.1" data-path="CREATE_BOILERPLATE.html">
             
                 <a href="CREATE_BOILERPLATE.html">
             
@@ -144,7 +146,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="SETUP_STORYBOOK.html">
+        <li class="chapter active" data-level="1.3.1" data-path="SETUP_STORYBOOK.html">
             
                 <a href="SETUP_STORYBOOK.html">
             
@@ -353,7 +355,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Create Boilerplate</a>
+        <a href="." >Setup Storybook</a>
     </h1>
 </div>
 
@@ -368,67 +370,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="create-boilerplate">Create Boilerplate</h1>
-<pre><code class="lang-bash"><span class="hljs-comment"># install initial `create-react-app` project with `react-scripts-ts` for TypeScript support</span>
-create-react-app &lt;APP_NAME&gt; --scripts-version=react-scripts-ts
-<span class="hljs-built_in">cd</span> &lt;APP_NAME&gt;
+                                <h1 id="storybook">Storybook</h1>
+<h2 id="setup-storybook">Setup Storybook</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># add dependencies</span>
+yarn add @storybook/react @types/storybook__react @storybook/addon-info react-docgen-typescript-webpack-plugin
 
-<span class="hljs-comment"># pin node version</span>
-node -v &gt; .nvmrc
+<span class="hljs-comment"># add typings as needed</span>
+yarn add @types/storybook__addon-actions
 
-<span class="hljs-comment"># install additional dependencies</span>
-    <span class="hljs-comment"># easy typed actions and creators</span>
-    yarn add @martin_hotell/rex-tils
+<span class="hljs-comment"># copy over the storybook config directory</span>
+cp -rv &lt;path/to/this/dir&gt;/.storybook .
 
-    <span class="hljs-comment"># redux</span>
-    yarn add react-redux redux redux-devtools-extension reselect
+<span class="hljs-comment"># open `package.json` editor add this line to &quot;scripts&quot;</span>
+<span class="hljs-comment"># &quot;storybook&quot;: &quot;start-storybook -p 9001 -c .storybook&quot;</span>
+vim package.json
 
-    <span class="hljs-comment"># epics</span>
-    yarn add redux-observable rxjs
-
-    <span class="hljs-comment"># lint for immutability</span>
-    yarn add tslint-immutable
-
-    <span class="hljs-comment"># only for the prototype app</span>
-    <span class="hljs-comment"># remove this when you start developing</span>
-    yarn add react-data-grid faker bootstrap
-
-<span class="hljs-comment"># note: install typings if necessary and available on `Definitely Typed`</span>
-<span class="hljs-comment"># yarn add @types/&lt;LIB_NAME&gt;</span>
-yarn add @types/react-data-grid @types/react-redux @types/faker
-
-<span class="hljs-comment"># copy over config files</span>
-cp -v &lt;path/to/this/dir&gt;/{.editorconfig,tsconfig.json,tslint.json} .
-
-<span class="hljs-comment"># add lint script to package.json</span>
-    <span class="hljs-comment"># open `package.json` editor add this line to &quot;scripts&quot;</span>
-    <span class="hljs-comment"># &quot;lint&quot;: &quot;./node_modules/.bin/tslint -t codeFrame -p ./tsconfig.json -c tslint.json&quot;</span>
-    vim package.json
-
-<span class="hljs-comment"># try lint command</span>
-yarn lint
-<span class="hljs-comment"># if it shows errors in the service worker related file(s), fix or disable it for them</span>
-<span class="hljs-comment"># `// tslint:disable` at the top of the file</span>
-
-<span class="hljs-comment"># replace src directory</span>
-    <span class="hljs-comment"># first save service worker related code (only `registerServiceWorker.ts` at the time of writing)</span>
-    <span class="hljs-comment"># double check</span>
-    <span class="hljs-comment"># ignore you don&apos;t need service workers</span>
-    cp -v src/registerServiceWorker.ts .
-    <span class="hljs-comment"># remove src directory</span>
-    rm -rfv src
-    <span class="hljs-comment"># copy over our src directory</span>
-    cp -rv &lt;path/to/this/dir&gt;/src .
-    <span class="hljs-comment"># put service worker related code back where it belongs</span>
-    mv -v registerServiceWorker.ts src/
-
-<span class="hljs-comment"># test if everything works</span>
-yarn start
+<span class="hljs-comment"># start storybook</span>
+yarn storybook
 </code></pre>
-<h2 id="start-developing">Start Developing</h2>
-<p>Congratulations!</p>
-<p>You now have a working React App with TypeScript and Redux.</p>
-<p>Happy coding!</p>
+<p>Now you can add <a href="CREATE_STORIES.html">Stories</a> to your <a href="src/Components/COMPONENTS.html">presentational components</a>.</p>
 
                                 
                                 </section>
@@ -457,6 +417,10 @@ yarn start
             
                 
                 
+                <a href="CREATE_STORIES.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Create Stories">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
             
         
     </div>
@@ -464,7 +428,7 @@ yarn start
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create Boilerplate","level":"1.2.1","depth":2,"next":{"title":"StoryBook","level":"1.3","depth":1,"ref":"","articles":[{"title":"Setup Storybook","level":"1.3.1","depth":2,"path":"SETUP_STORYBOOK.md","ref":"SETUP_STORYBOOK.md","articles":[]},{"title":"Create Stories","level":"1.3.2","depth":2,"path":"CREATE_STORIES.md","ref":"CREATE_STORIES.md","articles":[]}]},"previous":{"title":"Getting Started","level":"1.2","depth":1,"ref":"","articles":[{"title":"Create Boilerplate","level":"1.2.1","depth":2,"path":"CREATE_BOILERPLATE.md","ref":"CREATE_BOILERPLATE.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CREATE_BOILERPLATE.md","mtime":"2018-08-29T19:53:39.804Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T20:02:17.826Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup Storybook","level":"1.3.1","depth":2,"next":{"title":"Create Stories","level":"1.3.2","depth":2,"path":"CREATE_STORIES.md","ref":"CREATE_STORIES.md","articles":[]},"previous":{"title":"StoryBook","level":"1.3","depth":1,"ref":"","articles":[{"title":"Setup Storybook","level":"1.3.1","depth":2,"path":"SETUP_STORYBOOK.md","ref":"SETUP_STORYBOOK.md","articles":[]},{"title":"Create Stories","level":"1.3.2","depth":2,"path":"CREATE_STORIES.md","ref":"CREATE_STORIES.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SETUP_STORYBOOK.md","mtime":"2018-08-29T19:56:00.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-29T20:02:17.826Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
