@@ -11,11 +11,14 @@ yarn add @types/storybook__addon-actions
 
 # copy over the storybook config directory
 cp -rv <path/to/this/dir>/.storybook .
+```
 
+```diff
 # open `package.json` editor add this line to "scripts"
-# "storybook": "start-storybook -p 9001 -c .storybook"
-vim package.json
++ "storybook": "start-storybook -p 9001 -c .storybook"
+```
 
+```bash
 # start storybook
 yarn storybook
 ```
