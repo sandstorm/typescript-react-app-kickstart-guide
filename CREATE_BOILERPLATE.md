@@ -33,7 +33,7 @@ yarn add @types/react-data-grid @types/react-redux @types/faker
 cp -v <path/to/this/dir>/{.editorconfig,tsconfig.json,tslint.json} .
 
 # add lint script to package.json
-    # open `package.json` editor add this line to "scripts"
+    # open `package.json` in an editor add this line to "scripts"
     # "lint": "./node_modules/.bin/tslint -t codeFrame -p ./tsconfig.json -c tslint.json"
     vim package.json
 

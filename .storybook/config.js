@@ -1,4 +1,5 @@
 import { configure } from '@storybook/react';
+import '../src/index.css';
 
 const req = require.context('./../src', true, /story\.tsx$/);
 
@@ -7,4 +8,3 @@ function loadStories() {
 }
 
 configure(loadStories, module);
-

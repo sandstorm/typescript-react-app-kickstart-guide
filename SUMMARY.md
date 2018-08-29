@@ -9,6 +9,8 @@
 * Tests
   * [Setup Tests](SETUP_TESTS.md)
   * [Create Tests](CREATE_TESTS.md)
+* Sass
+  * [Setup Sass](SETUP_SASS.md)
 * Cookbook
   * [Components](COMPONENTS.md)
   * [Containers](CONTAINERS.md)
