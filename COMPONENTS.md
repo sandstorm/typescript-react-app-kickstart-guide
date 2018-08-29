@@ -5,9 +5,9 @@ They work like pure functions and thus are easy to test and maintain.
 
 We use the Atomic Design pattern to organise and compose our presentational components.
 
-We leverage [Storybook](../../SETUP_STORYBOOK.md) When developing presentational components.
+We leverage [Storybook](SETUP_STORYBOOK.md) When developing presentational components.
 
-You can also [write tests](../../CREATE_TESTS.md).
+You can also [write tests](CREATE_TESTS.md).
 
 The directory of a presentational component looks like this:
 ```

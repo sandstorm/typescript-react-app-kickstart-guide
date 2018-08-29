@@ -20,4 +20,4 @@ vim package.json
 yarn storybook
 ```
 
-Now you can add [Stories](CREATE_STORIES.md) to your [presentational components](src/Components/COMPONENTS.md).
+Now you can add [Stories](CREATE_STORIES.md) to your [presentational components](COMPONENTS.md).

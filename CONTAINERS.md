@@ -1,6 +1,6 @@
 # Containers
 
-Or sometimes called _connected_ or _smart_ components are connected to the Redux store and usually wrap [_presentational_ Components](../Components/COMPONENTS.md) and provide them with data from the store.
+Or sometimes called _connected_ or _smart_ components are connected to the Redux store and usually wrap [_presentational_ Components](COMPONENTS.md) and provide them with data from the store.
 
 Containers usually render no markup themselves. Try to use `React.Fragment` if otherwise using `div`.
 
