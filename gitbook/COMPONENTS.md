@@ -24,7 +24,6 @@ This can be used as snippet in VSCode or by copy-pasting. Replace ${1:ComponentN
 
 ```tsx
 import * as React from 'react';
-import './${1:ComponentName}.css';
 
 interface I${1:ComponentName}Props {}
 
