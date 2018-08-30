@@ -20,7 +20,7 @@ The directory of a presentational component looks like this:
 ```
 
 ## Skeleton
-This can be used as snippet in VSCode or by copy-pasting. Replace ${1:ComponentName} with the actual component name (automaticly happens when using VSCode snippets).
+This can be used as snippet in VSCode or by copy-pasting. Replace `${1:ComponentName}` with the actual component name (automaticly happens when using VSCode snippets).
 
 ```tsx
 import * as React from 'react';
@@ -29,7 +29,7 @@ interface I${1:ComponentName}Props {}
 
 export default class ${1:ComponentName} extends React.PureComponent<I${1:ComponentName}Props> {
   public render(): JSX.Element {
-    return <div>${1:ComponentName}</div>
+    return <div>${1:ComponentName}</div>;
   }
 }
 ```

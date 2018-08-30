@@ -42,9 +42,19 @@ yarn add @types/react-data-grid @types/react-redux @types/faker
 ```
 Copy over boilerplate code
 ```bash
+# save service worker stuff
+mv -v src/registerServiceWorker.ts .
+
+# remove `create-react-app`'s src directory
+rm -rfv src
+
+# insert path to this repo betwenn <> brackets!
 cp -rv <path/to/this/repo>/code/* .
 # don't forget files and directories starting with .
 cp -rv <path/to/this/repo>/code/.* .
+
+# move service worker stuff back into src
+mv -v registerServiceWorker.ts src/
 ```
 
 ```diff
@@ -62,7 +72,7 @@ cp -rv <path/to/this/repo>/code/.* .
 +   "build-js": "react-scripts-ts build",
 +   "build": "npm-run-all build-css build-js",
 +   "run-storybook": "start-storybook -p 9001 -c .storybook",
-+   "storybook": "npm run all -p watch-css run-storybook"
++   "storybook": "npm-run-all -p watch-css run-storybook"
 },
 ```
 
