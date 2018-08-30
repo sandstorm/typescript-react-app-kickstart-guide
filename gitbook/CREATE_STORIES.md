@@ -2,13 +2,6 @@
 
 Storybook files are placed into the directory of a component.
 
-```
-* Component
-- * index.ts
-- * Component.tsx
-- * Component.story.tsx
-```
-
 ## Skeleton
 
 ```tsx

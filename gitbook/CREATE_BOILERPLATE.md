@@ -30,7 +30,7 @@ node -v > .nvmrc
 yarn add @types/react-data-grid @types/react-redux @types/faker
 
 # copy over config files
-cp -v <path/to/this/dir>/{.editorconfig,tsconfig.json,tslint.json} .
+cp -v <path/to/this/dir>/code/{.editorconfig,tsconfig.json,tslint.json} .
 ```
 
 ```diff
@@ -53,7 +53,7 @@ yarn lint
     # remove src directory
     rm -rfv src
     # copy over our src directory
-    cp -rv <path/to/this/dir>/src .
+    cp -rv <path/to/this/dir>/code/src .
     # put service worker related code back where it belongs
     mv -v registerServiceWorker.ts src/
 

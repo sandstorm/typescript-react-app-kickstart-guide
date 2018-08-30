@@ -2,19 +2,19 @@
 
 * [Introduction](README.md)
 * Getting Started
-  * [Create Boilerplate](CREATE_BOILERPLATE.md)
+  * [Create Boilerplate](gitbook/CREATE_BOILERPLATE.md)
 * StoryBook
-  * [Setup Storybook](SETUP_STORYBOOK.md)
-  * [Create Stories](CREATE_STORIES.md)
+  * [Setup Storybook](gitbook/SETUP_STORYBOOK.md)
+  * [Create Stories](gitbook/CREATE_STORIES.md)
 * Tests
-  * [Setup Tests](SETUP_TESTS.md)
-  * [Create Tests](CREATE_TESTS.md)
+  * [Setup Tests](gitbook/SETUP_TESTS.md)
+  * [Create Tests](gitbook/CREATE_TESTS.md)
 * Sass
-  * [Setup Sass](SETUP_SASS.md)
+  * [Setup Sass](gitbook/SETUP_SASS.md)
 * Cookbook
-  * [Components](COMPONENTS.md)
-  * [Containers](CONTAINERS.md)
-  * [Domain](DOMAIN.md)
+  * [Components](gitbook/COMPONENTS.md)
+  * [Containers](gitbook/CONTAINERS.md)
+  * [Domain](gitbook/DOMAIN.md)
   * Redux
-    * [Configuration](REDUX_CONFIGURATION.md)
-    * [Store](REDUX_STORE.md)
+    * [Configuration](gitbook/REDUX_CONFIGURATION.md)
+    * [Store](gitbook/REDUX_STORE.md)
