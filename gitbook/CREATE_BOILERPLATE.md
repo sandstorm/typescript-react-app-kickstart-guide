@@ -54,7 +54,7 @@ cp -rv <path/to/this/repo>/code/.* .
 -   "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-+   "lint": "./node_modules/.bin/tslint -t codeFrame -p ./tsconfig.json -c tslint.json"
++   "lint": "tslint -t codeFrame -p ./tsconfig.json -c tslint.json"
 +   "build-css": "node-sass-chokidar ./src/index.scss ./src/index.css",
 +   "watch-css": "npm run build-css && node-sass-chokidar ./src/index.scss ./src/index.css --watch --recursive",
 +   "start-js": "react-scripts-ts start",
@@ -105,7 +105,7 @@ Your `package.json` should look like this now:
   "scripts": {
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "lint": "./node_modules/.bin/tslint -t codeFrame -p ./tsconfig.json -c tslint.json",
+    "lint": "tslint -t codeFrame -p ./tsconfig.json -c tslint.json",
     "build-css": "node-sass-chokidar ./src/index.scss ./src/index.css",
     "watch-css": "npm run build-css && node-sass-chokidar ./src/index.scss ./src/index.css --watch --recursive",
     "start-js": "react-scripts-ts start",
