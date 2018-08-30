@@ -4,7 +4,7 @@ import {ajax} from 'rxjs/ajax';
 import {delay, map, mergeMap} from 'rxjs/operators';
 
 import {IApplicationState} from '..';
-import ICompany from '../../../Domain/Company';
+import {ICompany} from '../../../Domain/Company';
 import {companies as defaultCompanies} from '../../../Domain/mockData';
 
 export interface ICompaniesState {

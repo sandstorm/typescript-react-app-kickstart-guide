@@ -5,3 +5,30 @@ To use Sagas, Loop or other async action reducers you have to install and integr
 
 > **Note**: There is a known issue with using Sagas in conjunction with `createAction` from `@martin_hotell/rex-tils` as they deep freeze the action object and Sagas tries to modify it with `Object.defineProperty`.
 > One could argue whom to blame, but for us it is Sagas fault to mutate the action instead of creating a new one with `Object.assign`.
+
+```ts
+import {applyMiddleware, createStore, Store} from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import {createEpicMiddleware} from 'redux-observable';
+
+import {IApplicationState, rootEpic, rootReducer} from './Store';
+
+export default function configureStore(initialState?: IApplicationState): Store<IApplicationState> {
+  // create middlewares
+  const epicMiddleware = createEpicMiddleware();
+
+  // create store
+  const store = createStore(
+    rootReducer,
+    initialState || {},
+    composeWithDevTools(
+      applyMiddleware(epicMiddleware)
+    )
+  );
+
+  // start middlewares like Saga, Epic etc.
+  epicMiddleware.run(rootEpic);
+
+  return store;
+}
+```

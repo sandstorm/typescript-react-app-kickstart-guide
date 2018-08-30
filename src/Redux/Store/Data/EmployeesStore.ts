@@ -1,8 +1,9 @@
 import {ActionsUnion, createAction} from '@martin_hotell/rex-tils';
 import {createSelector} from 'reselect';
-import IEmployee from '../../../Domain/Employee';
+
+import {IEmployee} from '../../../Domain/Employee';
 import {employees} from '../../../Domain/mockData';
-import {IApplicationState} from '../index';
+import {IApplicationState} from '..';
 import {selectors as CompanySelectors} from './CompaniesStore';
 
 export interface IEmployeeState {
@@ -10,7 +11,7 @@ export interface IEmployeeState {
 }
 
 const initialState: IEmployeeState = {
- rawApiData: employees,
+  rawApiData: employees,
 };
 
 export enum ActionTypes {

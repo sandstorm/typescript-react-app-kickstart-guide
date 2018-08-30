@@ -1,6 +1,7 @@
 import * as faker from 'faker';
-import ICompany from './Company';
-import IEmployee from './Employee';
+
+import {ICompany} from './Company';
+import {IEmployee} from './Employee';
 
 export const companies = createCompaniesMockData(50);
 export const employees = createEmployeesMockData(1000, companies.map((company) => company.id));

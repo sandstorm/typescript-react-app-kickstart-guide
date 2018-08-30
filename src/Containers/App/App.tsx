@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css';
 
 import CompanyTable from '../CompanyTable';
 import EmployeeTable from '../EmployeeTable';
