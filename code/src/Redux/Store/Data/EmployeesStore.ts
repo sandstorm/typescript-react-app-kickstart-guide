@@ -1,9 +1,9 @@
 import {ActionsUnion, createAction} from '@martin_hotell/rex-tils';
 import {createSelector} from 'reselect';
 
+import {IApplicationState} from '..';
 import {IEmployee} from '../../../Domain/Employee';
 import {employees} from '../../../Domain/mockData';
-import {IApplicationState} from '..';
 import {selectors as CompanySelectors} from './CompaniesStore';
 
 export interface IEmployeeState {
