@@ -1,6 +1,9 @@
 # React TypeScript kickstart
 
-This gitbook serves as a guide for kickstarting a new React project.
+This gitbook serves as a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Sass and Storybook.
+
+It also includes a cookbook for common modules. They can be copy-pasted into your Editor of choice or turned into VSCode snippets.
+The `${1:XXX}` Syntax is used by VSCode snippets to simultaniously edit specific parts of the snippet for fast and easy boilerplate creation.
 
 ## Prerequisites
 
