@@ -17,10 +17,10 @@ nvm install --lts
 brew install yarn --without-node
 
 # install gitbook
-yarn add -g gitbook
+npm install -g gitbook-cli
 
 # install boilerplate creator globally
-yarn add -g create-react-app react-scripts-ts
+npm install -g create-react-app react-scripts-ts
 ```
 
 Furthermore I recommend to use [VSCode](https://code.visualstudio.com/) as editor. Be shure to install the `TSLint` extension.
@@ -35,3 +35,6 @@ cd repo
 
 gitbook serve
 ```
+
+## TODO
+* Maybe move to Github and host there with gh-pages
