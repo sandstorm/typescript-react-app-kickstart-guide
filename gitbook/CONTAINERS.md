@@ -17,13 +17,13 @@ const mapStateToProps = (state: IApplicationState) => ({});
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({});
 
-type ${1:ContainerName}Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
+type TemplateContainerProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
-class ${1:ContainerName} extends React.PureComponent<${1:ContainerName}Props> {
+class TemplateContainer extends React.PureComponent<TemplateContainerProps> {
   public render(): JSX.Element {
-    return <React.Fragment>${1:ContainerName}</React.Fragment>;
+    return <React.Fragment>TemplateContainer</React.Fragment>;
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(${1:ContainerName});
+export default connect(mapStateToProps, mapDispatchToProps)(TemplateContainer);
 ```

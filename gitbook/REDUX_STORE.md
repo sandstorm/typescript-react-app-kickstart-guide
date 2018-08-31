@@ -8,34 +8,34 @@ import {IApplicationState} from '..';
 /**
  * State
  */
-export interface I${1:StoreName}State {
-  readonly test?: string;
+export interface ITemplateState {
+  readonly template?: string;
 }
 
-const initialState: I${1:StoreName}State = {
-  test: undefined,
+const initialState: ITemplateState = {
+  template: undefined,
 };
 
 /**
  * Actions
  */
 export enum ActionTypes {
-  TEST_ACTION = '@@<project_identifier/Path/To/Store>/TEST_ACTION',
+  TEMPLATE_ACTION = '@@NameSpace/Template/TEMPLATE_ACTION',
 }
 
 export const actions = {
-  testAction: (newTest: string) => createAction(ActionTypes.TEST_ACTION, {newTest}),
+  templateAction: (newTemplate: string) => createAction(ActionTypes.TEMPLATE_ACTION, {newTemplate}),
 };
 
-type ${1:StoreName}sActions = ActionsUnion<typeof actions>;
+type TemplatesActions = ActionsUnion<typeof actions>;
 
 /**
  * Reducer
  */
-export function reducer(state: I${1:StoreName}State = initialState, action: ${1:StoreName}sActions): I${1:StoreName}State {
+export function reducer(state: ITemplateState = initialState, action: TemplatesActions): ITemplateState {
   switch (action.type) {
-    case ActionTypes.TEST_ACTION:
-      return {...state, test: action.payload.newTest};
+    case ActionTypes.TEMPLATE_ACTION:
+      return {...state, template: action.payload.newTemplate};
     default:
       return state;
   }
@@ -44,10 +44,10 @@ export function reducer(state: I${1:StoreName}State = initialState, action: ${1:
 /**
  * Selectors
  */
-const testSelector = (state: IApplicationState) => state.Path.To.Store.test;
+const templateSelector = (state: IApplicationState) => state.PathToStore.Template.template;
 
 export const selectors = {
-  test: testSelector,
+  template: templateSelector,
 };
 
 /**

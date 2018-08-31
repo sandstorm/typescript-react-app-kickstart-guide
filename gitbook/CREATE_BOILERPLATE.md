@@ -53,6 +53,9 @@ cp -rv <path/to/this/repo>/code/* .
 # don't forget files and directories starting with .
 cp -rv <path/to/this/repo>/code/.* .
 
+# ignore VSCode workspace settings
+echo '\r# VSCode workspace settings\r.vscode/' >> .gitignore
+
 # move service worker stuff back into src
 mv -v registerServiceWorker.ts src/
 ```

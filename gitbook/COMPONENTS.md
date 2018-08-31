@@ -25,11 +25,11 @@ This can be used as snippet in VSCode or by copy-pasting. Replace `${1:Component
 ```tsx
 import * as React from 'react';
 
-interface I${1:ComponentName}Props {}
+interface ITemplateProps {}
 
-export default class ${1:ComponentName} extends React.PureComponent<I${1:ComponentName}Props> {
+export default class Template extends React.PureComponent<ITemplateProps> {
   public render(): JSX.Element {
-    return <div>${1:ComponentName}</div>;
+    return <div>Helloo Template!</div>;
   }
 }
 ```
