@@ -1,5 +1,5 @@
 {
-	// Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and
+  // Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
 	// same ids are connected.
@@ -12,7 +12,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Redux Store Skeleton": {
+  "Redux Store Skeleton": {
 		"prefix": "store",
 		"body": [
       "import {ActionsUnion, createAction} from '@martin_hotell/rex-tils';",
@@ -22,22 +22,22 @@
       " * State",
       " */",
       "export interface I${1:StoreName}State {",
-      "  readonly template?: string;",
+      "\treadonly template?: string;",
       "}",
       "",
       "const initialState: I${1:StoreName}State = {",
-      "  template: undefined,",
+      "\ttemplate: undefined,",
       "};",
       "",
       "/**",
       " * Actions",
       " */",
       "export enum ActionTypes {",
-      "  TEMPLATE_ACTION = '@@${2:NameSpace}/${1:StoreName}/TEMPLATE_ACTION',",
+      "\tTEMPLATE_ACTION = '@@${2:NameSpace}/${1:StoreName}/TEMPLATE_ACTION',",
       "}",
       "",
       "export const actions = {",
-      "  templateAction: (newTemplate: string) => createAction(ActionTypes.TEMPLATE_ACTION, {newTemplate}),",
+      "\ttemplateAction: (newTemplate: string) => createAction(ActionTypes.TEMPLATE_ACTION, {newTemplate}),",
       "};",
       "",
       "type ${1:StoreName}sActions = ActionsUnion<typeof actions>;",
@@ -46,12 +46,12 @@
       " * Reducer",
       " */",
       "export function reducer(state: I${1:StoreName}State = initialState, action: ${1:StoreName}sActions): I${1:StoreName}State {",
-      "  switch (action.type) {",
-      "    case ActionTypes.TEMPLATE_ACTION:",
-      "      return {...state, template: action.payload.newTemplate};",
-      "    default:",
-      "      return state;",
-      "  }",
+      "\tswitch (action.type) {",
+      "\t\tcase ActionTypes.TEMPLATE_ACTION:",
+      "\t\t\treturn {...state, template: action.payload.newTemplate};",
+      "\t\tdefault:",
+      "\t\t\treturn state;",
+      "\t}",
       "}",
       "",
       "/**",
@@ -60,7 +60,7 @@
       "const templateSelector = (state: IApplicationState) => state.${3:PathToStore}.${1:StoreName}.template;",
       "",
       "export const selectors = {",
-      "  template: templateSelector,",
+      "\ttemplate: templateSelector,",
       "};",
       "",
       "/**",

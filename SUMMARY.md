@@ -2,13 +2,13 @@
 
 * [Introduction](README.md)
 * Getting Started
-  * [Create Boilerplate](gitbook/CREATE_BOILERPLATE.md)
+  * [Create Boilerplate](gitbook/GettingStarted/Boilerplate.md)
 * Cookbook
-  * [Components](gitbook/COMPONENTS.md)
-  * [Containers](gitbook/CONTAINERS.md)
-  * [Domain](gitbook/DOMAIN.md)
-  * [Storybook](gitbook/CREATE_STORIES.md)
-  * [Tests](gitbook/CREATE_TESTS.md)
+  * [Components](gitbook/Cookbook/Components.md)
+  * [Containers](gitbook/Cookbook/Containers.md)
+  * [Domain](gitbook/Cookbook/Domain.md)
+  * [Storybook](gitbook/Cookbook/Storybook.md)
+  * [Tests](gitbook/Cookbook/Testing.md)
   * Redux
-    * [Configuration](gitbook/REDUX_CONFIGURATION.md)
-    * [Store](gitbook/REDUX_STORE.md)
+    * [Configuration](gitbook/Cookbook/Redux/ReduxConfiguration.md)
+    * [Store](gitbook/Cookbook/Redux/ReduxStore.md)

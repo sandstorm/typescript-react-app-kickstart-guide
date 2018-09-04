@@ -6,7 +6,7 @@ To use Sagas, Loop or other async action reducers you have to install and integr
 > **Note**: There is a known issue with using Sagas in conjunction with `createAction` from `@martin_hotell/rex-tils` as they deep freeze the action object and Sagas tries to modify it with `Object.defineProperty`.
 > One could argue whom to blame, but for us it is Sagas fault to mutate the action instead of creating a new one with `Object.assign`.
 
-> You do not have to copy this code, as it's already copied over while [creating the boilerplate](CREATE_BOILERPLATE.md).
+> ! You do not have to copy this code, as it's already copied over while [creating the boilerplate](../../GettingStarted/Boilerplate.md).
 
 ```ts
 import {applyMiddleware, createStore, Store} from 'redux';
