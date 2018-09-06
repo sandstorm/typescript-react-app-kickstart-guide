@@ -25,12 +25,47 @@ This can be used as snippet in VSCode or by copy-pasting. Replace `${1:Component
 ```tsx
 import * as React from 'react';
 
-interface ITemplateProps {}
+interface ITemplateProps {
+  readonly template: string;
+}
 
-export default class Template extends React.PureComponent<ITemplateProps> {
-  public render(): JSX.Element {
-    return <div>Helloo Template!</div>;
+interface ITemplateState {
+  readonly isCool: boolean;
+}
+
+const initialTemplateState: ITemplateState = {
+  isCool: true,
+};
+
+export default class Template extends React.PureComponent<ITemplateProps, ITemplateState> {
+  public static readonly defaultProps: Partial<ITemplateProps> = {
+    template: 'Bro!',
+  };
+
+  public constructor(props: ITemplateProps) {
+    super(props);
+    this.state = initialTemplateState;
   }
+
+  public render(): JSX.Element {
+    return (
+      <div>
+        <p>{this.getMessage()}</p>
+        <p>{Template.getPureMessage(this.state.isCool, this.props.template)}</p>
+        <p>{getPureMessageFromTheOutside(this.state.isCool, this.props.template)}</p>
+      </div>
+    );
+  }
+
+  private readonly getMessage = (): string => `Hey, ${this.state.isCool ? 'cool ' : ''}${this.props.template}`;
+
+  private static getPureMessage(isCool: boolean, template: string): string {
+    return `Hey, ${isCool ? 'cool ' : ''}${template}`;
+  }
+}
+
+function getPureMessageFromTheOutside(isCool: boolean, template: string): string {
+  return `Hey, ${isCool ? 'cool ' : ''}${template}`;
 }
 ```
 
@@ -40,5 +75,5 @@ export default class Template extends React.PureComponent<ITemplateProps> {
 * The `interface` replaces PropTypes
 * `render` has to be `public`
 * All other methods should be `private readonly`
-* Try to use pure functions as much as possible
-* If a component has no props -> omit the generic of React.PureComponent
+* Try to use pure functions as much as possible. Either defined inside the class as `private static` or outside of the class.
+* If a component has no props or state -> omit the generics of React.PureComponent
