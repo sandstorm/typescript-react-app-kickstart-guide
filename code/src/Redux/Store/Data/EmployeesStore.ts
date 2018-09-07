@@ -22,9 +22,9 @@ export const actions = {
   fetchEmployees: () => createAction(ActionTypes.FETCH_EMPLOYEES),
 };
 
-type EmployeesActions = ActionsUnion<typeof actions>;
+type EmployeesAction = ActionsUnion<typeof actions>;
 
-export function reducer(state: IEmployeeState = initialState, action: EmployeesActions): IEmployeeState {
+export function reducer(state: IEmployeeState = initialState, action: EmployeesAction): IEmployeeState {
   switch (action.type) {
     case ActionTypes.FETCH_EMPLOYEES:
     default:

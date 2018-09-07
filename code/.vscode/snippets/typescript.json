@@ -40,12 +40,12 @@
       "\ttemplateAction: (newTemplate: string) => createAction(ActionTypes.TEMPLATE_ACTION, {newTemplate}),",
       "};",
       "",
-      "type ${1:StoreName}sActions = ActionsUnion<typeof actions>;",
+      "type ${1:StoreName}sAction = ActionsUnion<typeof actions>;",
       "",
       "/**",
       " * Reducer",
       " */",
-      "export function reducer(state: I${1:StoreName}State = initialState, action: ${1:StoreName}sActions): I${1:StoreName}State {",
+      "export function reducer(state: I${1:StoreName}State = initialState, action: ${1:StoreName}sAction): I${1:StoreName}State {",
       "\tswitch (action.type) {",
       "\t\tcase ActionTypes.TEMPLATE_ACTION:",
       "\t\t\treturn {...state, template: action.payload.newTemplate};",
@@ -68,5 +68,22 @@
       " */"
     ],
     "description": "[Sandstorm] Create a new Redux store."
-	}
+  },
+  "Redux Epic": {
+    "prefix": "epic",
+    "body": [
+      "const ${2:EpicName}Epic: Epic<${1:ComponentName}Action> = (actions$: ActionsObservable<${1:ComponentName}Action>) => actions$",
+      "\t.pipe(",
+      "\t\tofType(ActionTypes.ACTION_TYPE),",
+      "\t\tdelay(1000),",
+      "\t\tmergeMap(action =>",
+      "\t\t\tajax.getJSON('/api/endpoints/template').pipe(",
+      "\t\t\t\tmap(response => actions.anotherAction())",
+      "\t\t\t)",
+      "\t\t)",
+      "\t);",
+      "${3:Don't forget to export the epic!}"
+    ],
+    "description": "[Sandstorm] Create a new Redux Epic."
+  }
 }

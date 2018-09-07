@@ -29,9 +29,9 @@ export const actions = {
   setCompanies: (companies: ReadonlyArray<ICompany>) => createAction(ActionTypes.SET_COMPANIES, {companies}),
 };
 
-type CompaniesActions = ActionsUnion<typeof actions>;
+type CompaniesAction = ActionsUnion<typeof actions>;
 
-export function reducer(state: ICompaniesState = initialState, action: CompaniesActions): ICompaniesState {
+export function reducer(state: ICompaniesState = initialState, action: CompaniesAction): ICompaniesState {
   switch (action.type) {
     case ActionTypes.SELECT_COMPANY:
       return {...state, selectedCompanyId: action.payload.companyId};
@@ -51,7 +51,7 @@ export const selectors = {
   selectedCompanyId: selectedCompanyIdSelector,
 };
 
-const fetchCompaniesEpic: Epic<CompaniesActions> = (actions$: ActionsObservable<CompaniesActions>) => actions$
+const fetchCompaniesEpic: Epic<CompaniesAction> = (actions$: ActionsObservable<CompaniesAction>) => actions$
   .pipe(
     ofType(ActionTypes.FETCH_COMPANIES),
     delay(1000),
