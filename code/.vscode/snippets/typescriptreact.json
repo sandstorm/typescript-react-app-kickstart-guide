@@ -2,7 +2,8 @@
 	"component": {
 		"prefix": "component",
 		"body": [
-			"import * as React from 'react';",
+      "import * as React from 'react';",
+      "import {PickDefaultProps} from 'types/defaultProps';",
 			"\r",
 			"interface ${1:ComponentName}Props {",
 			"\treadonly template: string;",
