@@ -3,16 +3,16 @@ import {ActionsObservable, combineEpics, Epic} from 'redux-observable';
 import {ajax} from 'rxjs/ajax';
 import {delay, map, mergeMap} from 'rxjs/operators';
 
-import {IApplicationState} from '..';
-import {ICompany} from '../../../Domain/Company';
+import {ApplicationState} from '..';
+import {Company} from '../../../Domain/Company';
 import {companies as defaultCompanies} from '../../../Domain/mockData';
 
-export interface ICompaniesState {
-  readonly rawApiData: ReadonlyArray<ICompany>;
+export interface CompaniesState {
+  readonly rawApiData: ReadonlyArray<Company>;
   readonly selectedCompanyId?: string;
 }
 
-const initialState: ICompaniesState = {
+const initialState: CompaniesState = {
   rawApiData: defaultCompanies,
   selectedCompanyId: undefined,
 };
@@ -26,12 +26,12 @@ export enum ActionTypes {
 export const actions = {
   fetchCompanies: () => createAction(ActionTypes.FETCH_COMPANIES),
   selectCompany: (companyId?: string) => createAction(ActionTypes.SELECT_COMPANY, {companyId}),
-  setCompanies: (companies: ReadonlyArray<ICompany>) => createAction(ActionTypes.SET_COMPANIES, {companies}),
+  setCompanies: (companies: ReadonlyArray<Company>) => createAction(ActionTypes.SET_COMPANIES, {companies}),
 };
 
 type CompaniesAction = ActionsUnion<typeof actions>;
 
-export function reducer(state: ICompaniesState = initialState, action: CompaniesAction): ICompaniesState {
+export function reducer(state: CompaniesState = initialState, action: CompaniesAction): CompaniesState {
   switch (action.type) {
     case ActionTypes.SELECT_COMPANY:
       return {...state, selectedCompanyId: action.payload.companyId};
@@ -43,8 +43,8 @@ export function reducer(state: ICompaniesState = initialState, action: Companies
   }
 }
 
-const companiesSelector = (state: IApplicationState) => state.Data.Companies.rawApiData;
-const selectedCompanyIdSelector = (state: IApplicationState) => state.Data.Companies.selectedCompanyId;
+const companiesSelector = (state: ApplicationState) => state.Data.Companies.rawApiData;
+const selectedCompanyIdSelector = (state: ApplicationState) => state.Data.Companies.selectedCompanyId;
 
 export const selectors = {
   companies: companiesSelector,

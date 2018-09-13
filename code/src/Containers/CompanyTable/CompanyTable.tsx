@@ -4,12 +4,12 @@ import * as ReactDataGrid from 'react-data-grid';
 import {connect} from 'react-redux';
 import {Dispatch} from 'redux';
 
-import {actions, IApplicationState, selectors} from '../../Redux/Store';
+import {actions, ApplicationState, selectors} from '../../Redux/Store';
 import createColumns from './createColumns';
 
 const columns = createColumns();
 
-const mapStateToProps = (state: IApplicationState) => ({
+const mapStateToProps = (state: ApplicationState) => ({
   rows: selectors.Data.Companies.companies(state),
 });
 

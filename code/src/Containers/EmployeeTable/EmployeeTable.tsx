@@ -2,12 +2,12 @@ import * as React from 'react';
 import * as ReactDataGrid from 'react-data-grid';
 import {connect} from 'react-redux';
 
-import {IApplicationState, selectors} from '../../Redux/Store';
+import {ApplicationState, selectors} from '../../Redux/Store';
 import createColumns from './createColumns';
 
 const columns = createColumns();
 
-const mapStateToProps = (state: IApplicationState) => ({
+const mapStateToProps = (state: ApplicationState) => ({
   employees: selectors.Data.Employees.employees(state),
 });
 

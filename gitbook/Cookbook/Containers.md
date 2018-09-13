@@ -11,9 +11,9 @@ Containers do not have to be large constructs. In fact it's recommended to use s
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {Dispatch} from 'redux';
-import {actions, IApplicationState, selectors} from '../../Redux/Store';
+import {actions, ApplicationState, selectors} from '../../Redux/Store';
 
-const mapStateToProps = (state: IApplicationState) => ({});
+const mapStateToProps = (state: ApplicationState) => ({});
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({});
 

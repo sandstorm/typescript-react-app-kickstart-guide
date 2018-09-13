@@ -4,9 +4,9 @@ import {combineEpics} from 'redux-observable';
 import * as CompaniesStore from './CompaniesStore';
 import * as EmployeesStore from './EmployeesStore';
 
-export interface IDataState {
-  readonly Companies: CompaniesStore.ICompaniesState;
-  readonly Employees: EmployeesStore.IEmployeeState;
+export interface DataState {
+  readonly Companies: CompaniesStore.CompaniesState;
+  readonly Employees: EmployeesStore.EmployeeState;
 }
 
 export const actions = {

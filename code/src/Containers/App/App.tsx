@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Template from '../../Components/Template';
+import Template from '../../Components/Atoms/Template';
 import CompanyTable from '../CompanyTable';
 import EmployeeTable from '../EmployeeTable';
 import logo from './logo.svg';

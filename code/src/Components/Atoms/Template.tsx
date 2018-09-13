@@ -1,26 +1,26 @@
 import * as React from 'react';
 import {PickDefaultProps} from 'types/defaultProps';
 
-interface ITemplateProps {
+interface TemplateProps {
   readonly template: string;
 }
 
-type DefaultProps = PickDefaultProps<ITemplateProps, 'template'>;
+type DefaultProps = PickDefaultProps<TemplateProps, 'template'>;
 
-interface ITemplateState {
+interface TemplateState {
   readonly isCool: boolean;
 }
 
-const initialTemplateState: ITemplateState = {
+const initialTemplateState: TemplateState = {
   isCool: true,
 };
 
-export default class Template extends React.PureComponent<ITemplateProps, ITemplateState> {
+export default class Template extends React.PureComponent<TemplateProps, TemplateState> {
   public static readonly defaultProps: DefaultProps = {
     template: 'Bro!',
   };
 
-  public constructor(props: ITemplateProps) {
+  public constructor(props: TemplateProps) {
     super(props);
     this.state = initialTemplateState;
   }

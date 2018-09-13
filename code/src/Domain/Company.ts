@@ -1,4 +1,4 @@
-export interface ICompany {
+export interface Company {
   readonly country: string;
   readonly id: string;
   readonly name: string;

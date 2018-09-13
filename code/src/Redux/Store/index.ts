@@ -3,8 +3,8 @@ import {combineEpics} from 'redux-observable';
 
 import * as Data from './Data';
 
-export interface IApplicationState {
-  readonly Data: Data.IDataState;
+export interface ApplicationState {
+  readonly Data: Data.DataState;
 }
 
 export const actions = {

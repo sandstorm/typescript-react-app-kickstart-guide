@@ -1,12 +1,12 @@
 import * as faker from 'faker';
 
-import {ICompany} from './Company';
-import {IEmployee} from './Employee';
+import {Company} from './Company';
+import {Employee} from './Employee';
 
 export const companies = createCompaniesMockData(50);
 export const employees = createEmployeesMockData(1000, companies.map((company) => company.id));
 
-function createCompaniesMockData(amount: number): ReadonlyArray<ICompany> {
+function createCompaniesMockData(amount: number): ReadonlyArray<Company> {
   return new Array(amount)
     .fill(undefined)
     .map(
@@ -19,7 +19,7 @@ function createCompaniesMockData(amount: number): ReadonlyArray<ICompany> {
     );
 }
 
-function createEmployeesMockData(amount: number, companyIds: ReadonlyArray<string>): ReadonlyArray<IEmployee> {
+function createEmployeesMockData(amount: number, companyIds: ReadonlyArray<string>): ReadonlyArray<Employee> {
   return new Array(amount)
     .fill(undefined)
     .map(

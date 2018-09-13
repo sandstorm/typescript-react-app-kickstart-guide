@@ -3,16 +3,16 @@
 ## Skeleton
 ```ts
 import {ActionsUnion, createAction} from '@martin_hotell/rex-tils';
-import {IApplicationState} from '..';
+import {ApplicationState} from '..';
 
 /**
  * State
  */
-export interface ITemplateState {
+export interface TemplateState {
   readonly template?: string;
 }
 
-const initialState: ITemplateState = {
+const initialState: TemplateState = {
   template: undefined,
 };
 
@@ -32,7 +32,7 @@ type TemplatesActions = ActionsUnion<typeof actions>;
 /**
  * Reducer
  */
-export function reducer(state: ITemplateState = initialState, action: TemplatesActions): ITemplateState {
+export function reducer(state: TemplateState = initialState, action: TemplatesActions): TemplateState {
   switch (action.type) {
     case ActionTypes.TEMPLATE_ACTION:
       return {...state, template: action.payload.newTemplate};
@@ -44,7 +44,7 @@ export function reducer(state: ITemplateState = initialState, action: TemplatesA
 /**
  * Selectors
  */
-const templateSelector = (state: IApplicationState) => state.PathToStore.Template.template;
+const templateSelector = (state: ApplicationState) => state.PathToStore.Template.template;
 
 export const selectors = {
   template: templateSelector,

@@ -1,16 +1,16 @@
 import {ActionsUnion, createAction} from '@martin_hotell/rex-tils';
 import {createSelector} from 'reselect';
 
-import {IApplicationState} from '..';
-import {IEmployee} from '../../../Domain/Employee';
+import {ApplicationState} from '..';
+import {Employee} from '../../../Domain/Employee';
 import {employees} from '../../../Domain/mockData';
 import {selectors as CompanySelectors} from './CompaniesStore';
 
-export interface IEmployeeState {
-  readonly rawApiData: ReadonlyArray<IEmployee>;
+export interface EmployeeState {
+  readonly rawApiData: ReadonlyArray<Employee>;
 }
 
-const initialState: IEmployeeState = {
+const initialState: EmployeeState = {
   rawApiData: employees,
 };
 
@@ -24,7 +24,7 @@ export const actions = {
 
 type EmployeesAction = ActionsUnion<typeof actions>;
 
-export function reducer(state: IEmployeeState = initialState, action: EmployeesAction): IEmployeeState {
+export function reducer(state: EmployeeState = initialState, action: EmployeesAction): EmployeeState {
   switch (action.type) {
     case ActionTypes.FETCH_EMPLOYEES:
     default:
@@ -32,7 +32,7 @@ export function reducer(state: IEmployeeState = initialState, action: EmployeesA
   }
 }
 
-const rawDataSelector = (state: IApplicationState) => state.Data.Employees.rawApiData;
+const rawDataSelector = (state: ApplicationState) => state.Data.Employees.rawApiData;
 
 const employeesSelector = createSelector(
   rawDataSelector,
