@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Template from '../../Components/Template';
 import CompanyTable from '../CompanyTable';
 import EmployeeTable from '../EmployeeTable';
 import logo from './logo.svg';
@@ -16,6 +17,7 @@ class App extends React.PureComponent {
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
         <main>
+          <Template />
           <h1>Companies</h1>
           <CompanyTable/>
 
