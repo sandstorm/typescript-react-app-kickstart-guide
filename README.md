@@ -19,12 +19,6 @@ nvm use default
 
 # yarn
 brew install yarn --without-node
-
-# install gitbook
-npm install -g gitbook-cli
-
-# install boilerplate creator globally
-npm install -g create-react-app react-scripts-ts
 ```
 
 ## Editor
@@ -38,20 +32,24 @@ To use a snippet just type `store` and select the `[Sandstorm] Create a new Redu
 ## Cookbook
 In the cookbook you will find skeletons for important modules. These skeletons are also available for VSCode as snippets users when the `Project Snippets` extension is installed (see above).
 
-* `component` - presentational component
-* `container` - connected component
-* `story` - storybook story for presentational component
-* `test` - test for component with snapshot test
-* `store` - redux store
+### *.tsx
+* `component` - [Sandstorm] Type safe PureComponent.
+* `container` - [Sandstorm] Type safe container component.
+* `story` - [Sandstorm] Type safe story for Storybook.
+* `test` - [Sandstorm] Type safe component test.
+
+### *.ts
+* `store` - [Sandstorm] Type safe Redux store.
+* `epic` - [Sandstorm] Type safe Redux Epic.
 
 ## How to Read
 
 ```bash
+# install gitbook
+npm install -g gitbook-cli
+
 git clone <repo>
 cd repo
 
 gitbook serve
 ```
-
-## TODO
-* Maybe move to Github and host there with gh-pages

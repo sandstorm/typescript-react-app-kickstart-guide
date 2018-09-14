@@ -1,6 +1,9 @@
 # Create Boilerplate
 
 ```bash
+# install boilerplate creator globally
+npm install -g create-react-app react-scripts-ts
+
 # install initial `create-react-app` project with `react-scripts-ts` for TypeScript support
 create-react-app <APP_NAME> --scripts-version=react-scripts-ts
 cd <APP_NAME>
