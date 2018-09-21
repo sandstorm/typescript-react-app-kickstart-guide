@@ -3,11 +3,13 @@
 Storybook files are placed into the directory of a component.
 
 ## Skeleton
+> Sandstorm VSCode snippet: `story`.
 
 ```tsx
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
+
 import Component from '.';
 
 storiesOf('Component', module)

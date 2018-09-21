@@ -7,6 +7,9 @@ import {ApplicationState} from '..';
 import {Company} from '../../../Domain/Company';
 import {companies as defaultCompanies} from '../../../Domain/mockData';
 
+//
+// State
+//
 export interface CompaniesState {
   readonly rawApiData: ReadonlyArray<Company>;
   readonly selectedCompanyId?: string;
@@ -17,6 +20,9 @@ const initialState: CompaniesState = {
   selectedCompanyId: undefined,
 };
 
+//
+// Actions
+//
 export enum ActionTypes {
   FETCH_COMPANIES = '@@salt-solutions/Data/Companies/FETCH_COMPANIES',
   SET_COMPANIES = '@@salt-solutions/Data/Companies/SET_COMPANIES',
@@ -31,6 +37,9 @@ export const actions = {
 
 type CompaniesAction = ActionsUnion<typeof actions>;
 
+//
+// Reducer
+//
 export function reducer(state: CompaniesState = initialState, action: CompaniesAction): CompaniesState {
   switch (action.type) {
     case ActionTypes.SELECT_COMPANY:
@@ -43,6 +52,9 @@ export function reducer(state: CompaniesState = initialState, action: CompaniesA
   }
 }
 
+//
+// Selectors
+//
 const companiesSelector = (state: ApplicationState) => state.Data.Companies.rawApiData;
 const selectedCompanyIdSelector = (state: ApplicationState) => state.Data.Companies.selectedCompanyId;
 
@@ -51,6 +63,9 @@ export const selectors = {
   selectedCompanyId: selectedCompanyIdSelector,
 };
 
+//
+// Async action handlers (Epics, Sagas, etc)
+//
 const fetchCompaniesEpic: Epic<CompaniesAction> = (actions$: ActionsObservable<CompaniesAction>) => actions$
   .pipe(
     ofType(ActionTypes.FETCH_COMPANIES),

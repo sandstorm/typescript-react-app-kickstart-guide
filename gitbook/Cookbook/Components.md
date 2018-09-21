@@ -1,13 +1,12 @@
 # Components
-
-Or sometimes called _presentational_ or _dumb_ components are components that only render markup based on their props.
+Sometimes called _presentational_ or _dumb_ components are components that only render markup based on their props.
 They work like pure functions and thus are easy to test and maintain.
 
 We use the Atomic Design pattern to organise and compose our presentational components.
 
-We leverage [Storybook](Storybook.md) When developing presentational components.
+We leverage [Storybook](Storybook.md) when developing presentational components.
 
-You can also [write tests](Testing.md).
+[Write tests](Testing.md)!
 
 The directory of a presentational component looks like this:
 ```
@@ -16,67 +15,68 @@ The directory of a presentational component looks like this:
 - * ComponentName.tsx
 - * ComponentName.test.tsx
 - * ComponentName.story.tsx
-// TODO Styles
+- * _ComponentName.scss
 ```
 
 ## Skeleton
-This can be used as snippet in VSCode or by copy-pasting. Replace `${1:ComponentName}` with the actual component name (automaticly happens when using VSCode snippets).
+> Sandstorm VSCode snippet: `component`.
 
 ```tsx
 import * as React from 'react';
 import {PickDefaultProps} from 'types/defaultProps';
 
+//
+// Props
+//
 interface TemplateProps {
   readonly template: string;
 }
 
 type DefaultProps = PickDefaultProps<TemplateProps, 'template'>;
 
+const defaultProps: DefaultProps = {
+  template: 'Bro',
+};
+
+//
+// State
+//
 interface TemplateState {
   readonly isCool: boolean;
 }
 
-const initialTemplateState: TemplateState = {
+const initialState: TemplateState = {
   isCool: true,
 };
 
+//
+// Class
+//
 export default class Template extends React.PureComponent<TemplateProps, TemplateState> {
-  public static readonly defaultProps: DefaultProps = {
-    template: 'Bro!',
-  };
+  public static readonly defaultProps = defaultProps;
 
   public constructor(props: TemplateProps) {
     super(props);
-    this.state = initialTemplateState;
+    this.state = initialState;
   }
 
   public render(): JSX.Element {
     return (
-      <div>
-        <p>{this.getMessage()}</p>
-        <p>{Template.getPureMessage(this.state.isCool, this.props.template)}</p>
-        <p>{getPureMessageFromTheOutside(this.state.isCool, this.props.template)}</p>
+      <div className="template">
+        <p>{`Hey, ${this.state.isCool ? 'cool ' : ''}${this.props.template}!`}</p>
       </div>
     );
   }
-
-  private readonly getMessage = (): string => `Hey, ${this.state.isCool ? 'cool ' : ''}${this.props.template}`;
-
-  private static getPureMessage(isCool: boolean, template: string): string {
-    return `Hey, ${isCool ? 'cool ' : ''}${template}`;
-  }
-}
-
-function getPureMessageFromTheOutside(isCool: boolean, template: string): string {
-  return `Hey, ${isCool ? 'cool ' : ''}${template}`;
 }
 ```
 
-## Notes
+## Styles
+To add styling, create a `.scss` file starting with an underscore (e.g. `_ComponentName.scss`).
+The underscore signals the preprocessor to handle the Sass file as a Sass partial.
+> Important: Don't forget to import the Sass file in `./src/index.scss` using the `@import ...` syntax.
 
-* We do not use _functional_ components. We use `React.PureComponent`
+## Notes
+* We do not use _functional_ components. We use `React.PureComponent`.
 * The `interface` replaces PropTypes
-* `render` has to be `public`
-* All other methods should be `private readonly`
-* Try to use pure functions as much as possible. Either defined inside the class as `private static` or outside of the class.
+* Try to use pure functions as much as possible. Either defined inside the class as `private static readonly` methods or as pure functions outside of the class.
 * If a component has no props or state -> omit the generics of React.PureComponent

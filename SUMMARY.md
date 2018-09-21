@@ -12,4 +12,3 @@
   * Redux
     * [Configuration](gitbook/Cookbook/Redux/ReduxConfiguration.md)
     * [Store](gitbook/Cookbook/Redux/ReduxStore.md)
-    * [Epics](gitbook/Cookbook/Redux/ReduxEpic.md)

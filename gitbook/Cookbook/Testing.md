@@ -1,11 +1,13 @@
 # Create Tests
 
 ## Skeleton
+> Sandstorm VSCode snippet: `test`.
 
 ```tsx
 import * as React from 'react';
 import {render} from 'react-dom';
 import * as ReactTestRenderer from 'react-test-renderer';
+
 import Component from '.';
 
 describe('Component tests', () => {

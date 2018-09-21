@@ -1,10 +1,6 @@
-@import "./Styles/Variables.scss";
+// Variables, Mixins, etc.
+@import "./Styles/_Variables.scss";
 
-@import "./Containers/App/App.scss";
-
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+// Components
+@import "./Components/Organisms/App/_App.scss";
+@import "./Components/Atoms/Template/_Template.scss";

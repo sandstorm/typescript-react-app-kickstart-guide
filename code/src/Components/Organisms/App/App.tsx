@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import Template from '../../Components/Atoms/Template';
-import CompanyTable from '../CompanyTable';
-import EmployeeTable from '../EmployeeTable';
+import CompanyTable from '../../../Containers/CompanyTable';
+import EmployeeTable from '../../../Containers/EmployeeTable';
+import Template from '../../Atoms/Template';
 import logo from './logo.svg';
 
-class App extends React.PureComponent {
+class App extends React.Component {
   public render(): JSX.Element {
     return (
       <div className="App">

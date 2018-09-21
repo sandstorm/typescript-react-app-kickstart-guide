@@ -6,6 +6,9 @@ import {Employee} from '../../../Domain/Employee';
 import {employees} from '../../../Domain/mockData';
 import {selectors as CompanySelectors} from './CompaniesStore';
 
+//
+// State
+//
 export interface EmployeeState {
   readonly rawApiData: ReadonlyArray<Employee>;
 }
@@ -14,6 +17,9 @@ const initialState: EmployeeState = {
   rawApiData: employees,
 };
 
+//
+// Actions
+//
 export enum ActionTypes {
   FETCH_EMPLOYEES = '@@salt-solutions/Data/Employees/FETCH_EMPLOYEES',
 }
@@ -24,6 +30,9 @@ export const actions = {
 
 type EmployeesAction = ActionsUnion<typeof actions>;
 
+//
+// Reducer
+//
 export function reducer(state: EmployeeState = initialState, action: EmployeesAction): EmployeeState {
   switch (action.type) {
     case ActionTypes.FETCH_EMPLOYEES:
@@ -32,6 +41,9 @@ export function reducer(state: EmployeeState = initialState, action: EmployeesAc
   }
 }
 
+//
+// Selectors
+//
 const rawDataSelector = (state: ApplicationState) => state.Data.Employees.rawApiData;
 
 const employeesSelector = createSelector(
@@ -43,3 +55,7 @@ const employeesSelector = createSelector(
 export const selectors = {
   employees: employeesSelector,
 };
+
+//
+// Async action handlers (Epics, Sagas, etc)
+//

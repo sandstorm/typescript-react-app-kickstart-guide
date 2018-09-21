@@ -1,8 +1,6 @@
 # Domain
 
-Put all your Domain specific code and business logic here.
-It's recommended to model the folder structure here as you see fit for your project and often develops with time and deeper understanding of the target domain.
+Put all your Domain specific code and business logic here (e.g. Models, DTOs, Services, Utilities).
+The folder structure may differ from project to project and develops over time and deeper knowledge about the target domain.
 
-Example directories would be: Model, DTO, Service, Utility etc.
-
-We still have to find out if the declaration of the Store is part of the Domain or part of the [Store](Redux/ReduxStore.md).
+Most of the domain specific functionality is then used in the Redux Store and Containers.

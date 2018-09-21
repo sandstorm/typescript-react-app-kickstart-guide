@@ -7,10 +7,13 @@ Containers usually render no markup themselves. Try to use `React.Fragment` if o
 Containers do not have to be large constructs. In fact it's recommended to use small containers that only connect to a minimal portion of the state.
 
 ## Skeleton
+> Sandstorm VSCode snippet: `container`.
+
 ```tsx
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {Dispatch} from 'redux';
+
 import {actions, ApplicationState, selectors} from '../../Redux/Store';
 
 const mapStateToProps = (state: ApplicationState) => ({});
