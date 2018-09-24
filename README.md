@@ -24,13 +24,11 @@ brew install yarn --without-node
 ## Editor
 We recommend to use [VSCode](https://code.visualstudio.com/) as editor. 
 Install the following Extensions:
-* `TSLint` -> linting support directly in editor
-* `Project Snippets` -> enables you to use the code snippets located in `.vscode/snippets`.
-
-To use a snippet just type `store` and select the `[Sandstorm] Create a new Redux store.` snippet.
+* `TSLint` -> linting support directly in editor ([marketplace](https://marketplace.visualstudio.com/items?itemName=eg2.tslint))
+* `Type safe React & Redux Snippets in TypeScript` -> Snippets for boilerplate code as shown in Cookbook ([marketplace](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets))
 
 ## Cookbook
-In the cookbook you will find skeletons for important modules. These skeletons are also available for VSCode as snippets users when the `Project Snippets` extension is installed (see above).
+In the cookbook you will find skeletons for important modules. These skeletons are also available for VSCode as snippets [here](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets).
 
 ### *.tsx
 * `component` - [Sandstorm] Type safe PureComponent.
@@ -40,16 +38,3 @@ In the cookbook you will find skeletons for important modules. These skeletons a
 
 ### *.ts
 * `store` - [Sandstorm] Type safe Redux store.
-* `epic` - [Sandstorm] Type safe Redux Epic.
-
-## How to Read
-
-```bash
-# install gitbook
-npm install -g gitbook-cli
-
-git clone <repo>
-cd repo
-
-gitbook serve
-```
