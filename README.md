@@ -1,6 +1,6 @@
 # React TypeScript kickstart
 
-This gitbook serves as a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Sass and Storybook.
+This gitbook serves as a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Sass, Storybook and unit testing.
 
 ## Prerequisites
 
@@ -28,13 +28,10 @@ Install the following Extensions:
 * `Type safe React & Redux Snippets in TypeScript` -> Snippets for boilerplate code as shown in Cookbook ([marketplace](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets))
 
 ## Cookbook
-In the cookbook you will find skeletons for important modules. These skeletons are also available for VSCode as snippets [here](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets).
+In the cookbook you will find skeletons for important modules. These skeletons are also available for VSCode as snippets in the VSCode [marketplace](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets).
 
-### *.tsx
-* `component` - [Sandstorm] Type safe PureComponent.
-* `container` - [Sandstorm] Type safe container component.
-* `story` - [Sandstorm] Type safe story for Storybook.
-* `test` - [Sandstorm] Type safe component test.
+## Example (Component with defaultProps)
 
-### *.ts
-* `store` - [Sandstorm] Type safe Redux store.
+> Look, ma! Intellisense!
+
+<img alt="component with defaultProps example" src="images/Component&defaultProps.gif" style="max-height: 90vh;">

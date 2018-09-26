@@ -21,7 +21,7 @@ interface TemplateState {
   readonly isCool: boolean;
 }
 
-const initialState: TemplateState = {
+const initialTemplateState: TemplateState = {
   isCool: true,
 };
 
@@ -33,7 +33,7 @@ export default class Template extends React.PureComponent<TemplateProps, Templat
 
   public constructor(props: TemplateProps) {
     super(props);
-    this.state = initialState;
+    this.state = initialTemplateState;
   }
 
   public render(): JSX.Element {

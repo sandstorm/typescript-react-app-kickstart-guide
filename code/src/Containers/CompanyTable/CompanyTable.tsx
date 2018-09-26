@@ -2,29 +2,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
 import * as ReactDataGrid from 'react-data-grid';
 import {connect} from 'react-redux';
-import {Dispatch} from 'redux';
 
+import {companyColumns} from '../../Domain/mockData';
 import {actions, ApplicationState, selectors} from '../../Redux/Store';
-import createColumns from './createColumns';
-
-const columns = createColumns();
 
 const mapStateToProps = (state: ApplicationState) => ({
   rows: selectors.Data.Companies.companies(state),
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  selectCompany: (id?: string) => dispatch(actions.Data.Companies.selectCompany(id)),
-});
+const mapDispatchToProps = {
+  selectCompany: actions.Data.Companies.selectCompany,
+};
 
-type CompaniesTableContainerProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
+type CompaniesTableContainerProps = ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps;
 
 class CompaniesTableContainer extends React.PureComponent<CompaniesTableContainerProps> {
   public render(): JSX.Element {
     return (
       <ReactDataGrid
         enableCellSelect={true}
-        columns={columns}
+        columns={companyColumns}
         rowGetter={this.getRow}
         rowsCount={this.props.rows.length}
         minHeight={500}

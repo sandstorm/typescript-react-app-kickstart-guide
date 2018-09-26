@@ -3,8 +3,59 @@ import * as faker from 'faker';
 import {Company} from './Company';
 import {Employee} from './Employee';
 
-export const companies = createCompaniesMockData(50);
-export const employees = createEmployeesMockData(1000, companies.map((company) => company.id));
+const globalColumnOptions = {
+  resizable: true,
+};
+
+const companyBaseColumns: ReadonlyArray<any> = [
+  {
+    key: 'id',
+    locked: true,
+    name: 'ID',
+  },
+  {
+    editable: true,
+    key: 'name',
+    name: 'Company Name',
+  },
+  {
+    editable: true,
+    key: 'country',
+    name: 'Country',
+  },
+  {
+    editable: true,
+    key: 'phone',
+    name: 'Phone',
+  },
+];
+
+const employeesBaseColumns: ReadonlyArray<any> = [
+  {
+    key: 'id',
+    locked: true,
+    name: 'ID',
+  },
+  {
+    key: 'firstName',
+    name: 'First Name',
+  },
+  {
+    editable: true,
+    key: 'lastName',
+    name: 'Last Name',
+  },
+  {
+    editable: true,
+    key: 'jobTitle',
+    name: 'Job Title',
+  },
+  {
+    editable: true,
+    key: 'email',
+    name: 'E-Mail',
+  },
+];
 
 function createCompaniesMockData(amount: number): ReadonlyArray<Company> {
   return new Array(amount)
@@ -33,3 +84,9 @@ function createEmployeesMockData(amount: number, companyIds: ReadonlyArray<strin
       })
     );
 }
+
+export const companyColumns = companyBaseColumns.map(column => ({...globalColumnOptions, ...column}));
+export const employeesColumns = employeesBaseColumns.map(column => ({...globalColumnOptions, ...column}));
+
+export const companies = createCompaniesMockData(50);
+export const employees = createEmployeesMockData(1000, companies.map((company) => company.id));

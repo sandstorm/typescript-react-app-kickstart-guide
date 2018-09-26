@@ -2,10 +2,8 @@ import * as React from 'react';
 import * as ReactDataGrid from 'react-data-grid';
 import {connect} from 'react-redux';
 
+import {employeesColumns} from '../../Domain/mockData';
 import {ApplicationState, selectors} from '../../Redux/Store';
-import createColumns from './createColumns';
-
-const columns = createColumns();
 
 const mapStateToProps = (state: ApplicationState) => ({
   employees: selectors.Data.Employees.employees(state),
@@ -18,7 +16,7 @@ class EmployeeTable extends React.PureComponent<EmployeeTableProps> {
     return (
       <ReactDataGrid
       enableCellSelect={true}
-      columns={columns}
+      columns={employeesColumns}
       rowGetter={this.getRow}
       rowsCount={this.props.employees.length}
       minHeight={500}
