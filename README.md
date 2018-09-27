@@ -35,3 +35,13 @@ In the cookbook you will find skeletons for important modules. These skeletons a
 > Look, ma! Intellisense!
 
 <img alt="component with defaultProps example" src="images/Component&defaultProps.gif" style="max-height: 90vh;">
+
+## Contribute
+
+1. Fork this repo 
+2. Run `npm install` 
+3. Make changes
+4. Test changes with `npm run build` and serve it locally (e.g. with `serve _book`, install `serve` with `npm install -g serve`)
+5. Create a pull request. 
+
+We're looking forward to your contributions!

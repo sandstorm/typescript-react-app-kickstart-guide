@@ -1,0 +1,23 @@
+{
+  "name": "react-typescript-kickstart",
+  "version": "1.0.0",
+  "description": "This gitbook serves as a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Sass, Storybook and unit testing.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook install && gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandstorm/typescript-react-app-kickstart-guide.git"
+  },
+  "author": "Sandstorm Media GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandstorm/typescript-react-app-kickstart-guide/issues"
+  },
+  "homepage": "https://github.com/sandstorm/typescript-react-app-kickstart-guide#readme",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
