@@ -2,7 +2,7 @@
 
 ```bash
 # install boilerplate creator globally
-npm install -g create-react-app react-scripts-ts
+npm install -g create-react-app@1.5.2 react-scripts-ts@2.17.0
 
 # install initial `create-react-app` project with `react-scripts-ts` for TypeScript support
 create-react-app <APP_NAME> --scripts-version=react-scripts-ts
