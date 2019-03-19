@@ -1,21 +1,18 @@
 # React TypeScript kickstart
 
-This gitbook serves as a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Sass, Storybook and unit testing.
+This the source for  a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Storybook and testing - all powered by [docusaurus](https://docusaurus.io).
+If you find errors, inconsistencies or want to contribute: Feel free to submit issues & pull requests.
 
 ## Prerequisites
 
 These tools are needed to start developing.
 
 ```bash
-# nvm
+# node version management
 brew install nvm
 
 # node (latest lts version)
 nvm install --lts
-# set latest stable lts as default
-nvm alias default stable
-# be tripple shure you use the right node version
-nvm use default
 
 # yarn
 brew install yarn --without-node
@@ -32,16 +29,6 @@ In the cookbook you will find skeletons for important modules. These skeletons a
 
 ## Example (Component with defaultProps)
 
-> Look, ma! Intellisense!
+> Look, Ma' - Intellisense!
 
 <img alt="component with defaultProps example" src="images/Component&defaultProps.gif" style="max-height: 90vh;">
-
-## Contribute
-
-1. Fork this repo 
-2. Run `npm install` 
-3. Make changes
-4. Test changes with `npm run build` and serve it locally (e.g. with `serve _book`, install `serve` with `npm install -g serve`)
-5. Create a pull request. 
-
-We're looking forward to your contributions!

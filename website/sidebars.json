@@ -1,0 +1,20 @@
+{
+  "guide": {
+      "Kickstart": [
+          "kickstart/create-boilerplate",
+          "kickstart/redux",
+          "kickstart/storybook",
+          "kickstart/tslint",
+          "kickstart/updating"
+      ],
+      "Cookbook": [
+          "cookbook/introduction",
+          "cookbook/components",
+          "cookbook/containers",
+          "cookbook/domain",
+          "cookbook/redux-store",
+          "cookbook/storybook",
+          "cookbook/testing"
+      ]
+  }
+}
