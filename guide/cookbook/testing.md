@@ -9,7 +9,7 @@ Add react test renderer for snapshot testing:
 yarn add react-test-renderer @types/react-test-renderer
 ```
 
-## Skeleton
+## Unit Test
 > Sandstorm VSCode snippet: `test`.
 
 ```tsx
@@ -30,4 +30,10 @@ describe('Component tests', () => {
     expect(ReactTestRenderer.create(<Component />)).toMatchSnapshot();
   });
 });
+
+## Integration Test
+coming soon..
+
+## BDD Test
+coming soon..
 ```

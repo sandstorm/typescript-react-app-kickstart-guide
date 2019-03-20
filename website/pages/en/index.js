@@ -57,7 +57,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl('kickstart/create-boilerplate')}>Get Started</Button>
+            <Button href={docUrl('kickstart/prerequisites')}>Get Started</Button>
             <Button 
               href={siteConfig.repoUrl}
               target="_blank"
@@ -71,56 +71,21 @@ class HomeSplash extends React.Component {
   }
 }
 
-const codeBlock = "```";
-const code = "`";
-const readme_markdown = (baseUrl) => `
-  ## Prerequisites
-
-  These tools are needed to start developing.
-
-  ${codeBlock}bash
-  # node version management
-  brew install nvm
-
-  # node (latest lts version)
-  nvm install --lts
-
-  # yarn
-  brew install yarn --without-node
-  ${codeBlock}
-
-  ## Editor
-  We recommend to use [VSCode](https://code.visualstudio.com/) as editor. 
-  Install the following Extensions:
-  * ${code}TSLint${code} -> linting support directly in editor ([marketplace](https://marketplace.visualstudio.com/items?itemName=eg2.tslint))
-  * ${code}Type safe React & Redux Snippets in TypeScript${code} -> Snippets for boilerplate code as shown in Cookbook ([marketplace](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets))
-
-  ## Cookbook
-  In the cookbook you will find skeletons for important modules. These skeletons are also available for VSCode as snippets in the VSCode [marketplace](https://marketplace.visualstudio.com/items?itemName=Sandstorm.vscode-awesome-ts-react-redux-snippets).
-
-  ## Example (Component with defaultProps)
-
-  > Look, Ma' - Intellisense!
-
-  <img alt="component with defaultProps example" src="${baseUrl}img/autocompletion.gif" style="max-height: 90vh;">
-`;
-
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = ''} = this.props;
     const {baseUrl} = siteConfig;
 
     const FeatureCallout = () => (
-      <div
-        style={{backgroundColor: '#fff'}}>
+      <div>
         <div style={{maxWidth: '1200px', margin: 'auto', padding: '24px 0'}}>
-          <MarkdownBlock>{readme_markdown(baseUrl)}</MarkdownBlock>
+          <MarkdownBlock></MarkdownBlock>
         </div>
       </div>
     );
 
     return (
-      <div style={{backgroundColor: '#f5fcff'}}>
+      <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer" style={{padding: 0}}>
           <FeatureCallout />

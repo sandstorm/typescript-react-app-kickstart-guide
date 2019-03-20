@@ -11,9 +11,6 @@
       "cookbook/containers": {
         "title": "Containers"
       },
-      "cookbook/domain": {
-        "title": "Domain"
-      },
       "cookbook/introduction": {
         "title": "Introduction"
       },
@@ -28,6 +25,9 @@
       },
       "kickstart/create-boilerplate": {
         "title": "Create Boilerplate"
+      },
+      "kickstart/prerequisites": {
+        "title": "Prerequisites"
       },
       "kickstart/redux": {
         "title": "Redux Store Configuration"

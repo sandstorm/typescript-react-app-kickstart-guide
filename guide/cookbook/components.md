@@ -61,3 +61,9 @@ export default class Template extends React.PureComponent<TemplateProps, Templat
   }
 }
 ```
+
+## Styling
+
+This is a somewhat difficult topic as we still figure out what _the right way_ is for us.
+
+You can find all the information you need for adding CSS, Sass or CSS/Sass Modules in the official [Create React App Docs](https://facebook.github.io/create-react-app/docs/adding-a-stylesheet).

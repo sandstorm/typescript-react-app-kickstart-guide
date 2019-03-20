@@ -23,7 +23,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'kickstart/create-boilerplate', label: 'Guide' },
+    { doc: 'kickstart/prerequisites', label: 'Guide' },
     { href: 'https://github.com/sandstorm/typescript-react-app-kickstart-guide', label: 'GitHub' },
   ],
 

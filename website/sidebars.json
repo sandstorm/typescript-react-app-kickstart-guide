@@ -1,6 +1,7 @@
 {
   "guide": {
       "Kickstart": [
+          "kickstart/prerequisites",
           "kickstart/create-boilerplate",
           "kickstart/redux",
           "kickstart/storybook",
@@ -11,7 +12,6 @@
           "cookbook/introduction",
           "cookbook/components",
           "cookbook/containers",
-          "cookbook/domain",
           "cookbook/redux-store",
           "cookbook/storybook",
           "cookbook/testing"

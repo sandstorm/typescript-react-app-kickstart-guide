@@ -27,11 +27,11 @@ class Footer extends React.Component {
         <section className="sitemap">
           <div>
             <h5>Guide</h5>
-            <a href={this.docUrl('kickstart/create-boilerplate.html')}>
-              Kickstart (Getting Started)
+            <a href={this.docUrl('kickstart/prerequisites.html')}>
+              Kickstart
             </a>
             <a href={this.docUrl('cookbook/introduction.html')}>
-              Cookbook (Introduction)
+              Cookbook
             </a>
           </div>
           <div>
