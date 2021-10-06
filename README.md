@@ -1,3 +1,5 @@
+> DEPRECATED! [Create React APP](https://create-react-app.dev/) and [Redux Toolkit](https://redux-toolkit.js.org/) made it simple to set up react & redux with typescript.
+
 # React TypeScript kickstart
 
 This the source for  a guide for kickstarting a new React project with preconfigured Redux, TypeScript, Storybook and testing - all powered by [docusaurus](https://docusaurus.io).
